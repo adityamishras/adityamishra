@@ -40,17 +40,20 @@ header .logo {
   color: #ffff;
   font-family: "Poppins", sans-serif;
   font-weight: bolder;
+  position: relative;
 }
-
+header .logo .logo-image {
+  height: 30px;
+  position: absolute;
+  top: 3px;
+  margin-left: 20px;
+}
 header .navbar .sectionlinks {
   font-size: 16px;
   padding: 1.3rem;
   color: #f9fafb;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-}
-header .navbar .sectionlinks:hover {
-  color: #fca311;
 }
 
 header .icons a {
@@ -95,15 +98,24 @@ header .fa-bars {
     left: 0;
   }
   header .navbar .sectionlinks {
-    margin: 1.5rem;
+    margin: 1.5rem 0;
     padding: 1.5rem;
     background: #121212;
-    border-top: 0.1rem soild black;
     display: block;
   }
+  header .logo .logo-image {
+    height: 24px;
+    position: absolute;
+    top: 6px;
+    right: 114%;
+    margin-left: 20px;
+  }
+  script{
+    display: none;
+  }
+
 }
-@media (orientation: landscape) {
-}
+
 #home {
   height: 100vh;
   display: flex;
@@ -232,6 +244,7 @@ header .fa-bars {
   margin: 2px 2px;
   background: #000;
   overflow-x: hidden;
+  position: relative;
 }
 .heading {
   text-align: center;
@@ -288,6 +301,17 @@ span {
   background: #333;
   color: #fff;
 }
+#goToTopButton{
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  left: 3%;
+  bottom: 3%;
+  background: #5e738c;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
 @media (max-width: 1180px) {
   .about .row .text-container {
     display: inline;
@@ -337,9 +361,21 @@ span {
   display: flex;
   filter: saturate(100%);
 }
+.row .container video {
+  padding: 20px;
+  display: flex;
+  filter: saturate(100%);
+}
 .row .container .text-container{
     width: 500px;
     padding: 10px 15px;
+    color: white;
+  }
+  .row .container .text-container h3{
+   margin: 20px 0;
+  }
+  .row .container .text-container span{
+    color: #fca311;
   }
   .row .container .text-container h1{
    font-size: 30px;
@@ -368,6 +404,9 @@ span {
     .row .container img {
         width: 350px;
     }
+    .row .container video {
+         width: 350px;
+    }
     .row .container .text-container {
         width: 100%;
     }
@@ -389,6 +428,9 @@ span {
     .row .container img {
         width: 300px;
     }
+    .row .container video {
+      width: 300px;
+ }
 
 }
 
@@ -427,12 +469,7 @@ span {
  color: white;
  position: relative;
  }
- .footer .copyright h3 img{
-  width: 20px;
-  margin: 0 0 0 10px;
-  position: absolute;
-  bottom: 19%;
-  }
+
   @media (max-width:340px) {
     .footer .row .connect-container .fa-brands{
       font-size: 20px;
