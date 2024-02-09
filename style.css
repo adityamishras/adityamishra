@@ -7,11 +7,15 @@
   text-decoration: none;
   transition: 0.7s linear;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   overflow-x: hidden;
+  background-color: #000;
 }
 #brandlogo {
   height: 20px;
@@ -34,7 +38,7 @@ header {
 header .logo {
   font-size: 24px;
   color: #ffff;
-  font-family:  "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bolder;
 }
 
@@ -57,7 +61,7 @@ header .icons a {
 #toggler {
   display: none;
 }
-header .fa-bars{
+header .fa-bars {
   font-size: 3rem;
   color: #fff;
   border-radius: 0.5rem;
@@ -98,18 +102,19 @@ header .fa-bars{
     display: block;
   }
 }
-@media (orientation:landscape){
- 
+@media (orientation: landscape) {
 }
 #home {
   height: 100vh;
   display: flex;
   justify-content: left;
   align-items: left;
-  background: url("thumbnail.jpg");
+  background: url("images/thumbnail.jpg");
   background-size: cover;
   background-position: right;
+  position: relative;
 }
+
 #home .textcontainer {
   width: 50%;
   height: 100vh;
@@ -117,7 +122,6 @@ header .fa-bars{
   flex-direction: column;
   justify-content: center;
   margin: 0 100px;
-  flex-basis: 50%;
 }
 #home .textcontainer h2 {
   font-size: 36px;
@@ -132,9 +136,9 @@ header .fa-bars{
   width: 50%;
   color: #f9fafb;
 }
-#home .textcontainer h3 span{
- color:rgba(245, 158, 11, 1);
-  }
+#home .textcontainer h3 span {
+  color: rgba(245, 158, 11, 1);
+}
 #home .textcontainer p {
   font-size: 16px;
   line-height: 22px;
@@ -145,7 +149,7 @@ header .fa-bars{
 #home .textcontainer .viewbtn {
   height: 40px;
   width: 164px;
-  background: #F2672E;
+  background: #f2672e;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -154,52 +158,59 @@ header .fa-bars{
   color: white;
   margin: 10px 0;
 }
+.image-container img{
+    height: 300px;
+    width: 300px;
+}
 
-@media (max-width: 765px){
+@media (max-width: 765px) {
   #home {
     background-position: left;
   }
+
   #home .textcontainer {
     flex-basis: 100%;
     margin: 0 50px;
+    position: relative;
   }
-  #home .textcontainer h3{
+  #home .textcontainer h3 {
     width: 100%;
     font-size: 35px;
     line-height: 45px;
   }
-  #home .textcontainer h2{
+  #home .textcontainer h2 {
     font-size: 35px;
   }
   #home .textcontainer p {
     width: 100%;
-}
-}
-@media (max-width: 350px){
-  #home .textcontainer h3{
-   font-size: 20px;
-   line-height: 25px;
   }
-  #home .textcontainer h2{
+}
+
+@media (max-width: 350px) {
+  #home .textcontainer h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  #home .textcontainer h2 {
     font-size: 20px;
     line-height: 25px;
   }
   #home .textcontainer {
     margin: 0px 10px;
-}
-#home .textcontainer .viewbtn {
-  height: 33px;
-  width: 127px;
-}
+  }
+  #home .textcontainer .viewbtn {
+    height: 33px;
+    width: 127px;
+  }
 }
 
-@media (max-width:936px) and (orientation:landscape) {
-  #home .textcontainer h3{
+@media (max-width: 936px) and (orientation: landscape) {
+  #home .textcontainer h3 {
     width: 100%;
     font-size: 25px;
     line-height: 30px;
   }
-  #home .textcontainer h2{
+  #home .textcontainer h2 {
     font-size: 25px;
     margin-top: 60px;
   }
@@ -214,9 +225,11 @@ header .fa-bars{
   }
 }
 
+
+
 /* About */
 .about {
-  margin: 0 60px;
+  margin: 2px 2px;
   background: #000;
   overflow-x: hidden;
 }
@@ -233,26 +246,17 @@ span {
 
 .about .row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
   padding: 2rem 0;
   padding-bottom: 3rem;
   justify-content: space-evenly;
 }
-.about .row .text-container{
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-  .about .row .text-container .stiker{
-    width: 100%;
-    text-align: center;
-  }
-.about .row .text-container img {
-  height: 300px;
-  justify-self: center;
-  margin: 0 20px;
+.about .row .text-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .about .row .content {
@@ -263,10 +267,10 @@ span {
 }
 
 .about .row .content p {
-  font-size: 20px;
+  font-size: 15px;
   color: #fff;
-  padding: 10px 50px;
-  line-height: 30px;
+  padding: 10px 15px;
+  line-height: 25px;
 }
 .about .row .content .viewbtn {
   height: 40px;
@@ -278,14 +282,14 @@ span {
   align-items: center;
   font-size: 14px;
   color: white;
-  margin: 10px 50px;
+  margin: 10px 13px;
 }
 .about .row .content .viewbtn:hover {
   background: #333;
   color: #fff;
 }
-@media (max-width: 1180px)  {
-  .about .row .text-container{
+@media (max-width: 1180px) {
+  .about .row .text-container {
     display: inline;
     overflow: hidden;
   }
@@ -294,212 +298,148 @@ span {
   .about {
     margin: 0 10px;
   }
-  .about .row .text-container{
+  .about .row .text-container {
     display: flex;
     overflow: hidden;
   }
-  .about .row .text-container .content{
+  .about .row .text-container .content {
     flex-basis: 100%;
   }
 }
 
 /* Project */
 .project {
-  margin: 0 60px;
-  background: #000;
   overflow-x: hidden;
-  position: relative;
+  margin: 0 40px;
 }
-.heading {
-  text-align: center;
-  font-size: 4rem;
-  color: #333;
-  padding: 3rem 1rem 1rem 1rem;
-  margin: 2rem 0;
-}
-#container {
-  width: 100%;
-  height: 600px;
-  overflow-x: scroll;
-  display: flex;
-}
-#slideLeft{
-  position: absolute;
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: none;
-  background: #F2672E;
-}
-#slideRight{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: none;
-  background: #F2672E;
-}
-#content{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.project .heading {
+  background: #121212;
+  margin: 20px 0;
   padding: 40px;
+  font-size: 50px;
 }
-::-webkit-scrollbar{
-  width: 0;
+.project .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  background: #333;
 }
-#container #content .wrapper{
-  margin: 100px;
-}
-#container #content .wrapper img{
-  height: 270px;
-}
-#container #content .wrapper .details h2{
-  color: #fff;
-  font-size: 28px;
-  line-height: 50px;
-}
-#container #content .wrapper .details p{
-  color: #fff;
-  font-size: 13px;
-  line-height: 14px;
-  text-transform: capitalize;
-}
-@media (max-width:949px) {
-  .project {
-    margin: 0 10px;
-  }
-  #container {
-    width: 100%;
-    height: 400px;
-    overflow-x: scroll;
-    display: flex;
-  }
-  #slideLeft,#slideRight{
-    display: inline;
-  }
-  #content{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0;
-  }
-  #container #content .wrapper{
-    margin: 30px;
-  }
-  #container #content .wrapper img{
-    height: 200px;
-  }
-
-}
-@media (max-width:759px) {
-  .project {
-    margin: 0;
-  }
-  #container {
-    width: 100%;
-    height: 500px;
-    overflow-y: scroll;
-    display: inline;
-  }
-  #content{
-    display: flex;
-    flex-direction: column;
-  }
-  #slideLeft,#slideRight{
-    display: none;
-  }
-  #container #content .wrapper .details p{
-    width: 360px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-.footerrow {
+.row .container {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
-  gap: 20px;
-  justify-content: space-evenly;
-  background: #f4f7f8;
+  flex-direction: column;
 }
-.contactaddress {
+.row .container img {
   padding: 20px;
-  list-style-type: none;
-  font-size: 15px;
-}
-.contactaddress .linksofcontact {
-  margin-top: 20px;
-}
-.smallterms {
-  padding: 20px;
-  list-style-type: none;
-  font-size: 15px;
-}
-.linksmallterms {
-  margin-top: 20px;
-}
-.socialmedialinks {
-  font-size: 25px;
-  margin: 20px 30px;
-}
-#footersociallinks {
-  color: #62487a;
-  position: relative;
-  margin: 10px 10px;
-  left: 20%;
-  transition: 0.4s;
-}
-#footersociallinks:hover {
-  color: #551a8b;
-  cursor: pointer;
-  transform: translateY(-40%);
-}
-.copyrightsection {
-  height: 10vh;
-}
-.paragraph {
   display: flex;
+  filter: saturate(100%);
+}
+.row .container .text-container{
+    width: 500px;
+    padding: 10px 15px;
+  }
+  .row .container .text-container h1{
+   font-size: 30px;
+  }
+  .row .container .text-container p{
+    font-size: 17px;
+   }
+@media (max-width: 769px) {
+    .project {
+        margin: 0px 10px;
+    }
+    .project .heading {
+        font-size: 20px;
+    }
+
+}
+@media (max-width: 495px) {
+    .project {
+        margin: 0px 5px;
+    }
+    .row .container {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .row .container img {
+        width: 350px;
+    }
+    .row .container .text-container {
+        width: 100%;
+    }
+
+}
+@media (max-width: 348px) {
+    .project .heading {
+        font-size: 15px;
+    }
+    .row .container .text-container {
+        width: 80%;
+    }
+    .row .container .text-container h1 {
+        font-size: 25px;
+    }
+    .row .container .text-container p {
+        font-size: 15px;
+    }
+    .row .container img {
+        width: 300px;
+    }
+
+}
+
+/* footer */
+.footer{
+  margin: 10px 20px;
+  text-align: center;
+}
+.footer span{
+ color: #fca311;
+}
+.footer .row{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: 14px;
-}
-@media (max-width: 765px) {
-  .qrcode {
-    height: 169px;
-    width: 294px;
-  }
-  .socialmedialinks {
-    font-size: 25px;
-    margin: 18px -4px;
-  }
-  .smallterms {
-    padding: 20px 0 0 35px;
-    list-style-type: none;
-    font-size: 15px;
-  }
-  .paragraph {
-    font-size: 10px;
-  }
-  #brandlogo {
-    height: 20px;
-    position: relative;
-    top: 30%;
-  }
+  align-items: center;
 }
 
-
-
+.footer .row .connect-container .fa-brands{
+ font-size: 25px;
+ margin: 15px;
+ color: white;
+ background: #333;
+ padding: 15px;
+ border-radius: 50%;
+}
+.footer .row .connect-container .fa-brands:hover{
+  cursor: pointer;
+  background-color: #fca311;
+  color: #000000;
+ }
+ .footer .copyright h3{
+  padding: 10px;
+  }
+ .footer .copyright h3{
+ color: white;
+ position: relative;
+ }
+ .footer .copyright h3 img{
+  width: 20px;
+  margin: 0 0 0 10px;
+  position: absolute;
+  bottom: 19%;
+  }
+  @media (max-width:340px) {
+    .footer .row .connect-container .fa-brands{
+      font-size: 20px;
+      margin: 10px;
+      color: white;
+      background: #333;
+      padding: 10px;
+      border-radius: 50%;
+     }
+  }
