@@ -17,20 +17,17 @@
 
 <body>
     <!-- header Section-->
-    <header>
-        <input type="checkbox" name="" id="toggler">
-        <label for="toggler" class="fas fa-bars"></label>
-        <a href="#" class="logo">Aditya!<span></span> <img class="logo-image" src="images/adilogo.png" alt=""></a>
-
-        <nav class="navbar">
-            <a href="#home"class="sectionlinks">home</a>
-            <a href="#about"class="sectionlinks">about</a>
-            <a href="#project" class="sectionlinks">project</a>
-            <a href="#Resume" class="sectionlinks">Resume</a>
-            <a href="#contact" class="sectionlinks">contact</a>
-        </nav>
-    </header>
-
+     <div class="header">
+        <div class="logo"><img class="imagelogo" src="images/adilogo.png" alt="">Aditya!</div>
+        <ul id="sidemenu">
+            <li class="sectionlinks"><i class="fa-solid fa-close" onclick="closemenu()"></i></li>
+            <li class="sectionlinks"><a href="#home">Home</a></li>
+            <li class="sectionlinks"><a href="#about">About</a></li>
+            <li class="sectionlinks"><a href="#">Project</a></li>
+            <li class="sectionlinks"><a href="#">Resume</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+     </div>
     <section id="home">
         <div class="textcontainer">
             <h2>Hello Everyone</h2>
@@ -76,7 +73,6 @@
                     <a href="#" class="viewbtn">Learn more</a>
                 </div>
             </div>
-            <button id="goToTopButton"class="fa-solid fa-house"></button>
     </section>
     <!-- project -->
     <section id="project" class="project">
@@ -150,7 +146,8 @@
         <h3>&copy; Designed and Developed by Aditya Mishra</h3>
     </div>
      </section>
-   <script src="javascript.js"></script>
+   <script src="javascript.js">
+   </script>
 </body>
 
 </html>
